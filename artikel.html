@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan & Fasilitas Medis Unggulan - Purity 8 Medical Center</title>
+    <meta name="description" content="Layanan medis cepat, tepat, dan peduli sepenuh hati. Fasilitas UGD 24 Jam, Maternity Room, Medical Check-Up, dan Rawat Inap modern di Purity 8.">
+    <meta name="keywords" content="Fasilitas Rumah Sakit, UGD 24 Jam, Maternity Room, Medical Check Up, Rawat Inap VIP, Purity Medical Center">
+    <meta name="author" content="Purity 8 Medical Center">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://puritymedica.com/services">
+
+    <meta property="og:title" content="Layanan Medis Purity 8 - Cepat & Tepat">
+    <meta property="og:description" content="Inovasi fasilitas rumah sakit untuk kenyamanan pasien dan keluarga. Melayani dengan sentuhan kemanusiaan.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:url" content="https://puritymedica.com/services">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Layanan Purity 8 Medical Center",
+      "description": "Daftar layanan medis lengkap termasuk UGD, Rawat Inap, dan Maternity.",
+      "provider": {
+        "@type": "Hospital",
+        "name": "Purity 8 Medical Center",
+        "telephone": "+62-813-4555-688",
+        "image": "https://puritymedica.com/assets/logo.png"
+      },
+      "specialty": ["Emergency Medicine", "Obstetrics", "General Practice"]
+    }
+    </script>
+
+    <style>
+        /* CSS Variables - Konsisten dengan file sebelumnya */
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #2c3e50;
+            --light-bg: #f8f9fa;
+            --accent-bg: #eef2ff;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        body { font-family: 'Poppins', sans-serif; color: #6c757d; overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { color: var(--secondary-color); font-weight: 700; }
+        
+        /* Navbar */
+        .top-bar { background: var(--primary-color); color: white; padding: 8px 0; font-size: 0.9rem; }
+        .navbar { background: white; padding: 15px 0; transition: 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .navbar.scrolled { padding: 10px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .navbar-brand { font-weight: 800; color: var(--primary-color); font-size: 1.5rem; }
+        .nav-link { font-weight: 500; color: var(--secondary-color); margin: 0 10px; }
+        .nav-link:hover, .nav-link.active { color: var(--primary-color); }
+        .btn-custom { background: var(--primary-color); color: white; border-radius: 50px; padding: 10px 30px; transition: 0.3s; border: 2px solid var(--primary-color); }
+        .btn-custom:hover { background: transparent; color: var(--primary-color); }
+
+        [cite_start]/* Page Header / Hero [cite: 211-212] */
+        .page-header {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1600') center/cover;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        [cite_start]/* Quote Section [cite: 214-215] */
+        .quote-section { position: relative; padding: 80px 0; }
+        .quote-img { width: 100%; border-radius: 15px; height: 450px; object-fit: cover; }
+        .quote-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            position: absolute;
+            bottom: 40px;
+            right: 0;
+            max-width: 500px;
+            border-left: 5px solid var(--primary-color);
+        }
+        @media (max-width: 991px) {
+            .quote-card { position: relative; bottom: auto; right: auto; margin-top: -50px; margin-left: 20px; width: 90%; }
+        }
+
+        [cite_start]/* Services Grid [cite: 226-233] */
+        .service-box-large {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            transition: 0.3s;
+            height: 100%;
+            text-align: center;
+        }
+        .service-box-large:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--card-shadow);
+            border-color: var(--primary-color);
+        }
+        .service-icon-lg {
+            width: 80px; height: 80px;
+            background: var(--accent-bg);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 25px;
+        }
+
+        [cite_start]/* Testimonials [cite: 236-249] */
+        .testimonial-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .stars { color: #ffc107; margin-bottom: 15px; }
+
+        [cite_start]/* CTA Section [cite: 250-253] */
+        .cta-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        .cta-section h2 { color: white; }
+        .btn-white { background: white; color: var(--primary-color); border-radius: 50px; padding: 12px 35px; font-weight: 600; transition: 0.3s; }
+        .btn-white:hover { background: #f0f0f0; }
+
+        /* Footer */
+        footer { background: #1a1a2e; color: #a0a0a0; padding-top: 60px; }
+        footer h5 { color: white; margin-bottom: 20px; }
+        footer a { color: #a0a0a0; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
+        footer a:hover { color: white; padding-left: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            [cite_start]<span><i class="fas fa-phone-alt me-2"></i> Hotline 24 Jam: <strong>0813 4555 688</strong> [cite: 210]</span>
+            <div class="d-none d-md-block">
+                <span class="me-3"><i class="fas fa-envelope me-1"></i> info@puritymedica.com</span>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-heartbeat me-2"></i>PURITY 8.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="doctor-landing.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="doctors.html">Dokter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                    <li class="nav-item ms-2"><a href="#" class="btn btn-custom">Buat Janji</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">SERVICES PAGE</span>
+            <h1 class="display-4 mb-3">Layanan Cepat, Tepat, dan<br>Peduli Sepenuh Hati.</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu eleifend velit. [cite_start]Etiam felis tortor, fringilla quis turpis ac. [cite: 213]
+            </p>
+        </div>
+    </header>
+
+    <section class="quote-section">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200" alt="Doctor and Patient" class="quote-img shadow" loading="lazy">
+                    
+                    <div class="quote-card">
+                        <i class="fas fa-quote-left fa-2x text-primary mb-3 opacity-25"></i>
+                        <h4 class="mb-0 lh-base">"Kami Hadir dengan Kompetensi Tinggi dan Sentuhan Kemanusiaan."</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="mb-3">Inovasi Fasilitas Rumah Sakit untuk<br>Kenyamanan Pasien dan Keluarga</h2>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu eleifend velit. [cite_start]Etiam felis tortor, fringilla quis turpis ac, condimentum hendrerit mauris. [cite: 217, 218]
+                    </p>
+                    <p class="text-muted">
+                        Aliquam et elit non magna convallis maximus. [cite_start]Lorem ipsum dolor sit amet. [cite: 224]
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box-large">
+                        <div class="service-icon-lg"><i class="fas fa-ambulance"></i></div>
+                        <h4 class="h5 fw-bold">UGD 24 Jam</h4>
+                        [cite_start]<p class="text-muted small">Etiam enim ligula, tempus ut tempor porttitor conse. [cite: 227]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box-large">
+                        <div class="service-icon-lg"><i class="fas fa-baby-carriage"></i></div>
+                        <h4 class="h5 fw-bold">Maternity Room</h4>
+                        [cite_start]<p class="text-muted small">Dolor sit amet, consectetur adipiscing elit. [cite: 229]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box-large">
+                        <div class="service-icon-lg"><i class="fas fa-notes-medical"></i></div>
+                        <h4 class="h5 fw-bold">Medical Check-Up</h4>
+                        [cite_start]<p class="text-muted small">Sed vulputate eros sit amet iaculis bibendum. [cite: 231]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box-large">
+                        <div class="service-icon-lg"><i class="fas fa-procedures"></i></div>
+                        <h4 class="h5 fw-bold">Rawat Inap</h4>
+                        [cite_start]<p class="text-muted small">Dolor sit amet, consectetur adipiscing elit. [cite: 233]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                [cite_start]<h6 class="text-primary fw-bold">TESTIMONIALS [cite: 236]</h6>
+                <h2>Apa Kata Pasien Kami</h2>
+                [cite_start]<p class="text-muted">Ulasan dari pasien yang telah berobat di tempat kami [cite: 237]</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-item h-100">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        [cite_start]<p class="fst-italic text-muted">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat eget arcu ac venenatis." [cite: 239]</p>
+                        <h6 class="fw-bold mt-3 mb-0">Mauria Arineke</h6>
+                        [cite_start]<small class="text-primary">Timika Papua [cite: 247]</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-item h-100">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        [cite_start]<p class="fst-italic text-muted">"Cras viverra eu turpis sed ultricies. Quisque mattis diam sit amet ipsum dapibus." [cite: 242]</p>
+                        <h6 class="fw-bold mt-3 mb-0">Maulia Navia</h6>
+                        [cite_start]<small class="text-primary">Denpasar Bali [cite: 248]</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-item h-100">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        [cite_start]<p class="fst-italic text-muted">"Pellentesque vel semper lectus. Maecenas sit amet diam bibendum metus finibus facilisis." [cite: 244]</p>
+                        <h6 class="fw-bold mt-3 mb-0">Salma Hilman</h6>
+                        [cite_start]<small class="text-primary">Jakarta [cite: 249]</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="cta-section text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    [cite_start]<h2 class="mb-3">Anda Butuh informasi lebih detail? [cite: 250]</h2>
+                    <p class="mb-4 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu eleifend velit. [cite_start]Etiam felis tortor, fringilla quis turpis ac. [cite: 251]</p>
+                    [cite_start]<a href="#kontak" class="btn btn-white btn-lg">KONTAK KAMI [cite: 253]</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="kontak">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    [cite_start]<h4 class="text-white mb-4">PURITY 8. [cite: 254]</h4>
+                    [cite_start]<p class="mb-4 text-white-50">Pelayanan Sepenuh Hati, Kesembuhan Anda Prioritas Utama Kami[cite: 255].</p>
+                    <div class="d-flex flex-column gap-2">
+                        <span><i class="fas fa-map-marker-alt me-2 text-primary"></i> Jl. [cite_start]Ngurah Rai-Gianyar, Bali 80511 [cite: 257]</span>
+                        [cite_start]<span><i class="fas fa-phone me-2 text-primary"></i> Hotline: 0365 788 899 [cite: 258]</span>
+                        [cite_start]<span><i class="fas fa-envelope me-2 text-primary"></i> info@puritymedica.com [cite: 259]</span>
+                    </div>
+                    [cite_start]<a href="#" class="btn btn-outline-light btn-sm mt-3 rounded-pill">View Google Map [cite: 260]</a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    [cite_start]<h5>Quick Navigasi [cite: 262]</h5>
+                    [cite_start]<a href="#">> Cari Dokter [cite: 263]</a>
+                    [cite_start]<a href="#">> Medical Check-Up [cite: 265]</a>
+                    [cite_start]<a href="#">> Apotik 24 Jam [cite: 267]</a>
+                    [cite_start]<a href="#">> Hubungi Kami [cite: 269]</a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Tentang Kami</h5>
+                    [cite_start]<a href="#">> Tentang Kami [cite: 264]</a>
+                    [cite_start]<a href="#">> Poli Klinik [cite: 266]</a>
+                    [cite_start]<a href="#">> Fasilitas [cite: 268]</a>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="small text-white-50">Dapatkan info kesehatan terbaru.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control border-0" placeholder="Email Anda..." style="border-radius: 50px 0 0 50px;">
+                        <button class="btn btn-primary" type="button" style="border-radius: 0 50px 50px 0;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-top border-secondary pt-4 pb-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <small>Copyright ©2026 sitename.com. [cite_start]All Rights Reserved. [cite: 261]</small>
+                </div>
+                <div class="col-md-6 text-center text-md-end d-none d-md-block">
+                    <small>Designed by Expert Developer</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Navbar Scroll Effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            });
+        });
+    </script>
+</body>
+</html>

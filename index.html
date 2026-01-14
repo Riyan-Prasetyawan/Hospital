@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purity 8 Medical Service - Layanan Kesehatan & Dokter Spesialis Terbaik</title>
+    <meta name="description" content="Purity Medical Center menyediakan layanan medis 24 jam, dokter spesialis bedah & anak, serta fasilitas rawat inap modern di Gianyar, Bali. Melayani dengan hati.">
+    <meta name="keywords" content="Rumah Sakit Bali, Dokter Spesialis Gianyar, UGD 24 Jam, Medical Check Up, Purity Medical Center, dr. I Ketut Lingga">
+    <meta name="author" content="Purity 8 Medical Center">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://puritymedica.com">
+
+    <meta property="og:title" content="Purity 8 Medical Service - Melayani Dengan Hati">
+    <meta property="og:description" content="Layanan kesehatan terpadu dengan fasilitas lengkap dan dokter spesialis berpengalaman di Bali.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:url" content="https://puritymedica.com">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hospital",
+      "name": "Purity 8 Medical Center",
+      "image": "https://puritymedica.com/assets/logo.png",
+      "telephone": "+62-813-4555-688",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Ngurah Rai-Gianyar",
+        "addressLocality": "Gianyar",
+        "addressRegion": "Bali",
+        "postalCode": "80511",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-8.5430", 
+        "longitude": "115.3245"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "department": [
+        {
+          "@type": "MedicalSpecialty",
+          "name": "UGD 24 Jam"
+        },
+        {
+          "@type": "MedicalSpecialty",
+          "name": "Spesialis Bedah"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* CSS Ditanam di sini agar menjadi satu file final yang mudah dijalankan */
+        :root {
+            --primary-color: #0d6efd;
+            --primary-dark: #0a58ca;
+            --secondary-color: #2c3e50;
+            --light-bg: #f8f9fa;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        body { font-family: 'Poppins', sans-serif; color: #6c757d; overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { color: var(--secondary-color); font-weight: 700; }
+        
+        /* Layout Utilities */
+        .top-bar { background: var(--primary-color); color: white; padding: 8px 0; font-size: 0.9rem; }
+        .navbar { background: white; padding: 15px 0; transition: 0.3s; }
+        .navbar.scrolled { padding: 10px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .navbar-brand { font-weight: 800; color: var(--primary-color); font-size: 1.5rem; }
+        .nav-link { font-weight: 500; color: var(--secondary-color); margin: 0 10px; }
+        .nav-link.active, .nav-link:hover { color: var(--primary-color); }
+        .btn-custom { background: var(--primary-color); color: white; border-radius: 50px; padding: 10px 30px; transition: 0.3s; border: 2px solid var(--primary-color); }
+        .btn-custom:hover { background: transparent; color: var(--primary-color); }
+
+        /* Hero - Background Image Updated (Clean Hospital Interior) */
+        .hero-section { 
+            padding: 120px 0 180px 0; 
+            background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1600') center/cover; 
+        }
+        
+        /* Overlap Cards */
+        .service-wrapper { margin-top: -100px; position: relative; z-index: 2; }
+        .service-overlay-card { background: white; padding: 30px; border-radius: 12px; box-shadow: var(--card-shadow); height: 100%; transition: 0.3s; }
+        .service-overlay-card:hover { transform: translateY(-10px); }
+        .service-overlay-card.highlight { background: var(--primary-color); color: white; }
+        .service-overlay-card.highlight p { color: rgba(255,255,255,0.9); }
+        .icon-circle { width: 60px; height: 60px; background: #eef2ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-color); font-size: 1.5rem; margin-bottom: 20px; transition: 0.3s; }
+        .service-overlay-card:hover .icon-circle { background: var(--primary-color); color: white; }
+
+        /* Grid Services */
+        .service-item-box { background: white; padding: 25px; border-radius: 12px; border: 1px solid #eee; height: 100%; transition: 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .service-item-box:hover { border-color: var(--primary-color); transform: translateY(-5px); box-shadow: var(--card-shadow); }
+
+        /* Doctors */
+        .doctor-card { border-radius: 15px; overflow: hidden; background: white; box-shadow: var(--card-shadow); transition: 0.3s; }
+        .doctor-card:hover { transform: translateY(-5px); }
+        .doctor-card img { width: 100%; height: 350px; object-fit: cover; object-position: top; }
+        .doctor-info { padding: 20px; text-align: center; }
+
+        /* Footer */
+        footer { background: #1a1a2e; color: #a0a0a0; padding-top: 60px; }
+        footer h5 { color: white; margin-bottom: 20px; }
+        footer a { color: #a0a0a0; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
+        footer a:hover { color: white; padding-left: 5px; }
+        .partner-logo { opacity: 0.6; filter: grayscale(100%); margin: 0 15px; font-weight: 700; transition: 0.3s; }
+        .partner-logo:hover { opacity: 1; filter: grayscale(0); }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-phone-alt me-2"></i> Hotline 24 Jam: <strong>0813 4555 688</strong></span>
+            <div class="d-none d-md-block">
+                <span class="me-3"><i class="fas fa-envelope me-1"></i> info@puritymedica.com</span>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-heartbeat me-2"></i>PURITY 8.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="doctor-landing.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="doctors.html">Dokter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                    <li class="nav-item ms-2"><a href="#" class="btn btn-custom">Buat Janji</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary mb-3 px-3 py-2 rounded-pill">PURITY MEDICAL CENTER</span>
+                    <h1 class="display-4 mb-4" style="line-height: 1.2;">Melayani Dengan Hati,<br>Mutu Terbaik.</h1>
+                    <p class="lead mb-4">Kami melayani dengan sepenuh hati, mengupayakan dengan maksimal untuk kesembuhan pasien, didukung oleh peralatan terlengkap.</p>
+                    <a href="#layanan" class="btn btn-custom btn-lg me-3">Lihat Layanan</a>
+                    <a href="wa/me.6285546528201" class="btn btn-outline-primary btn-lg rounded-pill px-4">Kontak Kami</a>
+                </div>
+                <div class="col-lg-6 text-center d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600&h=500" alt="Tim Medis Purity" class="img-fluid rounded-3 shadow-lg" width="600" height="500" loading="eager">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="service-wrapper">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-overlay-card highlight">
+                        <h3 class="h4 mb-3">Online Medical<br>Check-Up</h3>
+                        <p class="mb-4">Experience exceptional online medical care with Larana Inc Medical Center.</p>
+                        <a href="#" class="btn btn-light btn-sm rounded-pill px-4">Consult Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-overlay-card">
+                        <div class="icon-circle"><i class="fas fa-stethoscope"></i></div>
+                        <h4 class="h5 fw-bold">Medical Consultation</h4>
+                        <p class="text-muted small">Konsultasi langsung dengan dokter spesialis kami secara daring maupun luring.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-overlay-card">
+                        <div class="icon-circle"><i class="fas fa-prescription-bottle-alt"></i></div>
+                        <h4 class="h5 fw-bold">Prescription Refills</h4>
+                        <p class="text-muted small">Layanan penebusan resep obat apotik 24 jam dengan cepat dan tepat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-5 bg-light mt-5">
+        <div class="container pt-5">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase ls-1">Layanan Kami</h6>
+                <h2>Fasilitas & Layanan Unggulan</h2>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-2">
+                    <div class="service-item-box">
+                        <i class="fas fa-x-ray fa-2x text-primary mb-3"></i>
+                        <h6 class="fw-bold small">Pet/CT-Scan</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="service-item-box">
+                        <i class="fas fa-ambulance fa-2x text-primary mb-3"></i>
+                        <h6 class="fw-bold small">UGD 24 Jam</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="service-item-box">
+                        <i class="fas fa-user-md fa-2x text-primary mb-3"></i>
+                        <h6 class="fw-bold small">Home Care</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="service-item-box">
+                        <i class="fas fa-procedures fa-2x text-primary mb-3"></i>
+                        <h6 class="fw-bold small">Rawat Inap</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="service-item-box">
+                        <i class="fas fa-radiation fa-2x text-primary mb-3"></i>
+                        <h6 class="fw-bold small">Radioterapi</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="service-item-box">
+                        <i class="fas fa-baby-carriage fa-2x text-primary mb-3"></i>
+                        <h6 class="fw-bold small">Maternity</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dokter" class="py-5">
+        <div class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h6 class="text-primary fw-bold">DOKTER</h6>
+                    <h2>20+ Dokter Spesialis</h2>
+                    <p class="mb-0 text-muted">Tim medis profesional siap menangani kesehatan Anda.</p>
+                </div>
+                <a href="doctors.html" class="btn btn-outline-primary rounded-pill">Semua Dokter <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="doctor-card">
+                        <div class="doctor-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400&h=500" alt="dr. I Ketut Lingga Adinaya" loading="lazy">
+                        </div>
+                        <div class="doctor-info">
+                            <h5 class="mb-1 fs-6">dr. I Ketut Lingga, Sp.B</h5>
+                            <p class="text-primary small mb-0 fw-bold">Spesialis Bedah</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="doctor-card">
+                        <div class="doctor-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400&h=500" alt="dr. Ariela Wahyuni" loading="lazy">
+                        </div>
+                        <div class="doctor-info">
+                            <h5 class="mb-1 fs-6">dr. Ariela Wahyuni, Sp.OG</h5>
+                            <p class="text-primary small mb-0 fw-bold">Spesialis Kandungan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-light p-5 rounded-4 h-100 d-flex flex-column justify-content-center">
+                        <i class="fas fa-quote-left fa-3x text-primary opacity-25 mb-3"></i>
+                        <h4 class="mb-4 fst-italic">"Pelayanan Sepenuh Hati, Kesembuhan Anda Prioritas Utama Kami"</h4>
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=100&h=100" class="rounded-circle me-3" width="60" height="60" alt="GM Photo">
+                            <div>
+                                <h6 class="mb-0 fw-bold">dr. Ariela Wahyuni, Sp.OG</h6>
+                                <small class="text-muted">General Manager Purity 8</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="artikel" class="py-5 bg-light">
+        <div class="container">
+            <h3 class="mb-4 fw-bold">Artikel Kesehatan Terbaru</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <small class="text-primary fw-bold">16 Apr 2025</small>
+                            <h5 class="card-title mt-2"><a href="#" class="text-decoration-none text-dark">5 Tips Menjaga Kesehatan Balita</a></h5>
+                            <p class="card-text text-muted small">Panduan lengkap menjaga imunitas balita di musim pancaroba.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <small class="text-primary fw-bold">10 Apr 2025</small>
+                            <h5 class="card-title mt-2"><a href="#" class="text-decoration-none text-dark">Kulit Kering pada Lansia?</a></h5>
+                            <p class="card-text text-muted small">Penyebab dan cara mengatasi masalah kulit pada usia lanjut.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <small class="text-primary fw-bold">16 Apr 2025</small>
+                            <h5 class="card-title mt-2"><a href="#" class="text-decoration-none text-dark">Pemerintah Siapkan Rontgen Gratis</a></h5>
+                            <p class="card-text text-muted small">Program baru pemerintah untuk deteksi dini TBC.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white border-top">
+        <div class="container text-center">
+            <p class="text-muted text-uppercase small ls-2 mb-4">Mitra Asuransi Terpercaya</p>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+                <h4 class="partner-logo">Sequislife</h4>
+                <h4 class="partner-logo">SinarMas</h4>
+                <h4 class="partner-logo">BNI Life</h4>
+                <h4 class="partner-logo">BRI Life</h4>
+                <h4 class="partner-logo">BPJS Kesehatan</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontak">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">PURITY 8.</h4>
+                    <p class="mb-4" style="max-width: 300px;">Kami melayani dengan sepenuh hati, mengupayakan yang terbaik untuk kesembuhan Anda.</p>
+                    <div class="d-flex flex-column gap-2">
+                        <span><i class="fas fa-map-marker-alt me-2 text-primary"></i> Jl. Ngurah Rai-Gianyar, Bali 80511</span>
+                        <span><i class="fas fa-phone me-2 text-primary"></i> 0365 788 899</span>
+                        <span><i class="fas fa-envelope me-2 text-primary"></i> info@puritymedica.com</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Quick Link</h5>
+                    <a href="#dokter">Cari Dokter</a>
+                    <a href="#layanan">Medical Check-Up</a>
+                    <a href="#">Apotik 24 Jam</a>
+                    <a href="#kontak">Hubungi Kami</a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Tentang</h5>
+                    <a href="#">Profil RS</a>
+                    <a href="#">Fasilitas</a>
+                    <a href="#">Karir</a>
+                    <a href="#">Kebijakan Privasi</a>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="small">Dapatkan informasi kesehatan terbaru.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control newsletter-input" placeholder="Email Anda..." style="border-radius: 50px 0 0 50px; border:none;">
+                        <button class="btn btn-primary btn-subscribe" type="button" style="border-radius: 0 50px 50px 0;">Langganan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-top border-secondary pt-4 pb-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <small>&copy; 2026 Purity Medical Center. All Rights Reserved.</small>
+                </div>
+                <div class="col-md-6 text-center text-md-end d-none d-md-block">
+                    <small>Designed by Expert Developer</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Navbar Scroll Effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if(target) {
+                        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Newsletter Alert (Interactivity)
+            const subBtn = document.querySelector('.btn-subscribe');
+            if(subBtn) {
+                subBtn.addEventListener('click', () => {
+                    alert('Terima kasih! Anda telah terdaftar.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

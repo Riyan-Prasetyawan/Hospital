@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Dokter & Jadwal Praktek - Purity 8 Medical Center</title>
+    <meta name="description" content="Temukan dokter spesialis terbaik di Purity 8 Medical Center. Cari jadwal praktek dokter Bedah, Kandungan, Gigi, THT, dan Saraf di Gianyar, Bali.">
+    <meta name="keywords" content="Cari Dokter Bali, Jadwal Dokter Purity 8, Dokter Spesialis Gianyar, dr SpOG Bali, dr SpB Gianyar">
+    <meta name="author" content="Purity 8 Medical Center">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://puritymedica.com/doctors">
+
+    <meta property="og:title" content="Cari Dokter Spesialis - Purity 8 Medical Center">
+    <meta property="og:description" content="Layanan pencarian dokter spesialis lengkap dengan jadwal praktek terkini.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1576091160550-217358c7e618?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:url" content="https://puritymedica.com/doctors">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Cari Dokter Purity 8",
+      "description": "Halaman pencarian dokter spesialis.",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "Physician",
+            "name": "dr. Ardalia Angraeni, Sp.THT-KL",
+            "medicalSpecialty": "Otolaryngologic"
+          },
+          {
+            "@type": "Physician",
+            "name": "drg. Ni Putu Maharani, SKG",
+            "medicalSpecialty": "Dentistry"
+          }
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #2c3e50;
+            --light-bg: #f0f8ff; /* Light blue tint matching the header visual */
+            --card-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        body { font-family: 'Poppins', sans-serif; color: #6c757d; overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { color: var(--secondary-color); font-weight: 700; }
+        
+        /* Navbar */
+        .top-bar { background: var(--primary-color); color: white; padding: 8px 0; font-size: 0.9rem; }
+        .navbar { background: white; padding: 15px 0; transition: 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .navbar.scrolled { padding: 10px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .navbar-brand { font-weight: 800; color: var(--primary-color); font-size: 1.5rem; }
+        .nav-link { font-weight: 500; color: var(--secondary-color); margin: 0 10px; }
+        .nav-link:hover { color: var(--primary-color); }
+        .btn-custom { background: var(--primary-color); color: white; border-radius: 50px; padding: 10px 30px; transition: 0.3s; border: 2px solid var(--primary-color); }
+        .btn-custom:hover { background: transparent; color: var(--primary-color); }
+
+        /* Header / Search Section [cite: 321-326] */
+        .search-header {
+            background: var(--light-bg);
+            padding: 80px 0 120px; /* Extra padding bottom for search bar overlap */
+            text-align: center;
+        }
+        .search-container {
+            margin-top: -40px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .form-control, .form-select {
+            border-radius: 5px;
+            padding: 12px;
+            border: 1px solid #dee2e6;
+            background-color: #f8f9fa;
+        }
+        .form-control:focus, .form-select:focus {
+            box-shadow: none;
+            border-color: var(--primary-color);
+            background-color: white;
+        }
+        .btn-search {
+            background-color: #1a237e; /* Darker blue per screenshot [cite: 326] */
+            color: white;
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        /* Doctor Grid  */
+        .doctor-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: 0.3s;
+            height: 100%;
+            border: 1px solid #f0f0f0;
+        }
+        .doctor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .doctor-img-container {
+            height: 300px;
+            overflow: hidden;
+            background-color: #e9ecef;
+        }
+        .doctor-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        .doctor-body {
+            padding: 20px;
+        }
+        .doctor-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+        .doctor-specialty {
+            font-size: 0.85rem;
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer { background: #1a1a2e; color: #a0a0a0; padding-top: 60px; }
+        footer h5 { color: white; margin-bottom: 20px; }
+        footer a { color: #a0a0a0; text-decoration: none; display: block; margin-bottom: 8px; transition: 0.3s; }
+        footer a:hover { color: white; padding-left: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-phone-alt me-2"></i> Hotline 24 Jam: <strong>0813 4555 688</strong></span> <div class="d-none d-md-block">
+                <span class="me-3"><i class="fas fa-envelope me-1"></i> info@puritymedica.om</span>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-heartbeat me-2"></i>PURITY 8.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="doctor-landing.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="doctors.html">Dokter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                    <li class="nav-item ms-2"><a href="#" class="btn btn-custom">Buat Janji</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="search-header">
+        <div class="container">
+            <h1 class="display-5 mb-3">Cari Dokter</h1>
+            <p class="text-muted mx-auto" style="max-width: 600px;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat eget arcu ac venenatis.
+            </p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="search-container">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" placeholder="Ketik nama dokter disini...">
+                            </div>
+                            <div class="col-md-5">
+                                <select class="form-select">
+                                    <option selected>Pilih Kategori Dokter</option>
+                                    <option value="1">Spesialis Bedah</option>
+                                    <option value="2">Spesialis Kandungan</option>
+                                    <option value="3">Dokter Gigi</option>
+                                    <option value="4">Spesialis THT</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-search">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <div class="doctor-img-container">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400&h=500" alt="dr. Ardalia Angraeni" loading="lazy">
+                        </div>
+                        <div class="doctor-body">
+                            <h5 class="doctor-name">dr. Ardalia Angraeni,<br>Sp.THT-KL</h5>
+                            <p class="doctor-specialty">Spesialis THT-KL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <div class="doctor-img-container">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400&h=500" alt="drg. Ni Putu Maharani" loading="lazy">
+                        </div>
+                        <div class="doctor-body">
+                            <h5 class="doctor-name">drg. Ni Putu Maharani,<br>SKG</h5>
+                            <p class="doctor-specialty">Dokter Gigi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <div class="doctor-img-container">
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400&h=500" alt="dr. Kdk Yudhi Arjawa" loading="lazy">
+                        </div>
+                        <div class="doctor-body">
+                            <h5 class="doctor-name">dr. Kdk Yudhi Arjawa,<br>Sp.B</h5>
+                            <p class="doctor-specialty">Spesialis Bedah</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <div class="doctor-img-container">
+                            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=400&h=500" alt="dr. I Gde Kompyang S" loading="lazy">
+                        </div>
+                        <div class="doctor-body">
+                            <h5 class="doctor-name">dr. I Gde Kompyang S,<br>Sp.OG</h5>
+                            <p class="doctor-specialty">Spesialis Kandungan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <div class="doctor-img-container">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400&h=500" alt="dr. I Ketut Lingga Adinaya" loading="lazy">
+                        </div>
+                        <div class="doctor-body">
+                            <h5 class="doctor-name">dr. I Ketut Lingga<br>Adinaya, Sp.B</h5>
+                            <p class="doctor-specialty">Spesialis Bedah</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <div class="doctor-img-container">
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=400&h=500" alt="dr. Aries Budiman" loading="lazy">
+                        </div>
+                        <div class="doctor-body">
+                            <h5 class="doctor-name">dr. Aries Budiman,<br>Sp.PD</h5>
+                            <p class="doctor-specialty">Spesialis Penyakit Dalam</p> </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <div class="doctor-img-container">
+                            <img src="https://images.unsplash.com/photo-1651008325506-e7755a6e7812?auto=format&fit=crop&q=80&w=400&h=500" alt="dr. Mahardika Yasa" loading="lazy">
+                        </div>
+                        <div class="doctor-body">
+                            <h5 class="doctor-name">dr. Mahardika Yasa,<br>M.Biomed, Sp.S</h5>
+                            <p class="doctor-specialty">Spesialis Saraf</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <div class="doctor-img-container">
+                            <img src="https://images.unsplash.com/photo-1612531386530-97286d97c2d2?auto=format&fit=crop&q=80&w=400&h=500" alt="dr. Ricky Pradipta Antoni" loading="lazy">
+                        </div>
+                        <div class="doctor-body">
+                            <h5 class="doctor-name">dr. Ricky Pradipta<br>Antoni, Sp.P (K)</h5>
+                            <p class="doctor-specialty">Spesialis Paru</p> </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">PURITY 8.</h4>
+                    <p class="mb-4 text-white-50">Pelayanan Sepenuh Hati, Kesembuhan Anda Prioritas Utama Kami.</p>
+                    <div class="d-flex flex-column gap-2">
+                        <span><i class="fas fa-map-marker-alt me-2 text-primary"></i> Jl. Ngurah Rai-Gianyar, Bali 80511</span>
+                        <span><i class="fas fa-phone me-2 text-primary"></i> Hotline: 0365 788 899</span>
+                        <span><i class="fas fa-envelope me-2 text-primary"></i> info@puritymedica.om</span>
+                    </div>
+                    <a href="#" class="btn btn-outline-light btn-sm mt-3 rounded-pill">View Google Map</a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Quick Navigasi</h5>
+                    <a href="#">> Cari Dokter</a>
+                    <a href="#">> Medical Check-Up</a>
+                    <a href="#">> Apotik 24 Jam</a>
+                    <a href="#">> Hubungi Kami</a>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Tentang Kami</h5>
+                    <a href="#">> Tentang Kami</a>
+                    <a href="#">> Poli Klinik</a>
+                    <a href="#">> Fasilitas</a>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="small text-white-50">Dapatkan info kesehatan terbaru.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control border-0" placeholder="Email Anda..." style="border-radius: 50px 0 0 50px;">
+                        <button class="btn btn-primary" type="button" style="border-radius: 0 50px 50px 0;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-top border-secondary pt-4 pb-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <small>Copyright ©2026 sitename.com. All Rights Reserved.</small>
+                </div>
+                <div class="col-md-6 text-center text-md-end d-none d-md-block">
+                    <small>Designed by Expert Developer</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            });
+        });
+    </script>
+</body>
+</html>
